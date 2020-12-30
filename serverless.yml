@@ -47,7 +47,7 @@ custom:
 # you can add packaging information here
 package:
   exclude:
-    snowflake-conf.sh
+    - snowflake-conf.sh
 #  include:
 #    - include-me.js
 #    - include-me-dir/**
