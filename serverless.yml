@@ -22,7 +22,7 @@ custom:
     password: ${env:SNOWFLAKE_PASSWORD}
     warehouse: ""
     database: ${env:SNOWFLAKE_DATABASE}
-    schema: PUBLIC
+    schema: ${env:SNOWFLAKE_SCHEMA}
 
 # you can add statements to the Lambda function's IAM Role here
 #  iamRoleStatements:
@@ -72,8 +72,8 @@ functions:
   starsnow_request_get:
     handler: handler.starsnowRequestGet
     snowflake:
-      argument_signature: (url VARCHAR2)
-      data_type: VARCHAR2
+      argument_signature: (url VARCHAR)
+      data_type: VARCHAR
     events:
       - http:
           path: starsnow_request_get
