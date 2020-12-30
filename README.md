@@ -1,4 +1,4 @@
-# StarSnow Request
+# StarSnow Request  ![Integration tests](https://github.com/starschema/starsnow_request/workflows/Deploy%20master%20branch/badge.svg)
 
 HTTP Client for Snowflake database (HTTP get/post from SQL)
 
