@@ -12,18 +12,22 @@ const axios = require('axios');
  * @param {string} url URL to invoke
  * @param {object} params axios config object
  * @returns {Promise} Promise object that contains the entire axios response
- */ 
+ */
 const makeRequest = (url, params) => {
   const config = _.defaults(params, { method: 'get' }, { url: url })
 
+  if (!config['url']) {
+    return Promise.reject({ errorCode: 1, message: `URL parameter cannot be empty.` })
+  }
 
   return axios(config)
     .then(response => {
       return _.pick(response, ["headers", "status", "statusText", "data"])
     })
     .catch(error => {
-      return { errorCode: 6
-        , message: `cannot retrieve url "${url}": ${error}.` 
+      return {
+        errorCode: 2
+        , message: `cannot retrieve url "${url}": ${error}.`
         , request: params
       }
     })
