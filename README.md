@@ -2,7 +2,7 @@
 
 HTTP Client for Snowflake database (HTTP get/post from SQL)
 
-The idea is simple: invoke HTTP/HTTPS web servers directly from Snowflake Database SQL statements using pre-deployed, generic external functions. 
+The idea is simple: invoke HTTP/HTTPS web servers directly from Snowflake Database SQL statements using pre-deployed, generic external functions. Built on top of [Axios](https://github.com/axios/axios).
 
 
 ## StarSnow Request API 
@@ -15,7 +15,7 @@ The function takes one string argument (url) and returns with the content of tha
 
 **`variant STARSNOW_REQUEST(url VARCHAR, params OBJECT)`**
 
-The function takes and url and an parameters object that passed as an axios configuration to request. The following configuration properties are supported:
+The function takes and url and an parameters object that passed as an [axios configuration](https://github.com/axios/axios#request-config) to request. The following configuration properties are supported:
 
 
 ```javascript
