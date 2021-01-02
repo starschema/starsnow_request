@@ -19,6 +19,7 @@ Get Snowflake system status. Select value from the result `variant`:
 ```sql
 select STARSNOW_REQUEST('https://status.snowflake.com/api/v2/status.json', NULL):data:status:description as snowflake_status;
 ```
+![](https://user-images.githubusercontent.com/82426/103464558-df01b000-4d34-11eb-8228-4e7d16e81875.png)
 
 Get Snowflake historical stock values:
 
@@ -33,7 +34,7 @@ from TABLE (FLATTEN(
                                                            'apikey', '<your_alphavantage_key>'))
             ): data:"Time Series (Daily)"));
 ```
-
+![](https://user-images.githubusercontent.com/82426/103464555-db6e2900-4d34-11eb-82f5-cc54112243cb.png)
 
 ## StarSnow Request API 
 
