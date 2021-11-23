@@ -6,8 +6,6 @@ The idea is simple: invoke HTTP/HTTPS web servers directly from Snowflake Databa
 
 Detailed blog post on usage: https://medium.com/starschema-blog/starsnow-http-client-for-snowflake-sql-e1b329293fc6
 
-> **WARNING: Currently only Serverless version 2.28 and prior are supported.**
-
 ## Examples
 
 Simple HTTP get. varchar input (URL), varchar return (content of the site):
@@ -152,7 +150,7 @@ On successful execution, the status code, headers and data are returned in singl
 To deploy, clone the repo, then:
 
 ```
-$ npm install -g serverless@2.27.0
+$ npm install -g serverless
 $ npm install
 $ vim serverless.yml # edit your snowflake account details
 $ sls deploy
